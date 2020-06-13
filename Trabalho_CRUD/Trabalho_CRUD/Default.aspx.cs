@@ -51,9 +51,14 @@ namespace Trabalho_CRUD
                     cmd.Parameters.AddWithValue("usuario", usuario);
 
                     string funcao = Convert.ToString(cmd.ExecuteScalar());
+                    cmd.CommandText = @"select nome 
+                                        from cliente_web
+                                        where login = @usuario";
+                    string nome = Convert.ToString(cmd.ExecuteScalar());
 
                     // Gravar Session
                     Session["Perfil"] = funcao;
+                    Session["Nome"] = nome;
 
                     // Fazer redirecionamento
                     FormsAuthentication.RedirectFromLoginPage(funcao, false);

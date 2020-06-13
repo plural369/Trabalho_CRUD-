@@ -104,6 +104,7 @@
     <Content Include="editar.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Img\lamborghini-huracan-Alexander-Migl-wikimedia-commons-660x372.jpg" />
+    <Content Include="Img\user-icon-vector.jpg" />
     <Content Include="Inserir.aspx" />
     <Content Include="Listar.aspx" />
     <Content Include="Logout.aspx" />

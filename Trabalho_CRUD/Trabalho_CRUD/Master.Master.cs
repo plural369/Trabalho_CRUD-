@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,14 @@ namespace Trabalho_CRUD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                lblNome_Usuario.Text = Session["Nome"].ToString();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
