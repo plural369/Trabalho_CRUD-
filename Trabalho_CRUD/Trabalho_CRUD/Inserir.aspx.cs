@@ -12,10 +12,18 @@ namespace Trabalho_CRUD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string funcao = Session["Perfil"].ToString();
-            if (funcao == "O")
+            try
             {
-                btnCadastrar.Visible = false;
+                string funcao = Session["Perfil"].ToString();
+                if (funcao == "O")
+                {
+                    btnCadastrar.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                Response.Redirect("Default.aspx");
             }
         }
 
